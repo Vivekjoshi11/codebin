@@ -48,3 +48,8 @@
   .container button:hover {
     opacity: 0.8; /* Slightly reduce opacity on button hover */
   }
+  .container .btn-green:disabled, .btn-red:disabled {
+    background-color: #ddd; /* Green color for the login button */
+    /* color: white; White text for the login button */
+    cursor: not-allowed;
+  }
