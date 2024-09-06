@@ -1,0 +1,50 @@
+.container {
+    display: flex; /* Center elements horizontally */
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center elements horizontally within the container */
+    padding: 20px; /* Add some padding for spacing */
+    border: 1px solid #ccc; /* Add a thin border */
+    border-radius: 5px; /* Round corners for a softer look */
+    width: fit-content; /* Allow the form to fit its content */
+  }
+  
+  .container h4 {
+    margin-bottom: 10px; /* Add some space below the heading */
+    text-align: center; /* Center the heading text */
+  }
+  
+  .container input {
+    width: 100%; /* Make the input fields fill the container width */
+    padding: 10px; /* Add some padding for easier typing */
+    border: 1px solid #ccc; /* Add a thin border */
+    border-radius: 3px; /* Round corners for the input fields */
+    margin-bottom: 10px; /* Add spacing between elements */
+  }
+  
+  .container h5.red-text {
+    color: red; /* Set error text to red */
+    font-size: 0.8em; /* Make the error message slightly smaller */
+    margin-bottom: 5px; /* Add a small margin below the error message */
+  }
+  
+  .container button {
+    padding: 10px 20px; /* Add some padding for the buttons */
+    border: none; /* Remove default button border */
+    border-radius: 3px; /* Round corners for the buttons */
+    cursor: pointer; /* Make the button look clickable */
+    margin: 5px; /* Add spacing between buttons */
+  }
+  
+  .container .btn-green {
+    background-color: #4CAF50; /* Green color for the login button */
+    color: white; /* White text for the login button */
+  }
+  
+  .container .btn-red {
+    background-color: #f44336; /* Red color for the reset button */
+    color: white; /* White text for the reset button */
+  }
+  
+  .container button:hover {
+    opacity: 0.8; /* Slightly reduce opacity on button hover */
+  }
