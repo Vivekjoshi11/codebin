@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
+import { AuthService } from '../../services/auth.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -10,7 +12,7 @@ import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angula
 })
 export class LoginComponent {
 
-  
+  constructor( private authService:AuthService ,private router:Router ){}
 
   email= new FormControl("",[
     Validators.required,
@@ -23,12 +25,24 @@ export class LoginComponent {
     ]
   )
 
-  loginForm = new FormGroup([
-     this.email,
-     this.password
-  ])
+  loginForm = new FormGroup({
+    email: this.email,
+    password: this.password
+  });
+  // login(){
+  //   const email = this.loginForm.get('email')?.value;
+  //   const password = this.loginForm.get('password')?.value;
+  //   // console.log(this.loginForm.value)
+  //   if (email && password) {
+  //     console.log({ email, password });
+  //     this.authService.loginUser(email, password);
+  //   } else {
+  //     console.log('Form is invalid');
+  //   }
+  //   // this.authService.loginUser(this.loginForm.value.email,this.loginForm.value.password!)
+  // }
   login(){
-    console.log(this.loginForm.value)
+    this.authService.loginUser(this.loginForm.value.email!,this.loginForm.value.password!)
   }
   reset() {
     // throw new Error('Method not implemented.');
